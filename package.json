@@ -1,0 +1,36 @@
+{
+    "name": "ts-minimal-kit-cli",
+    "version": "0.0.1",
+    "description": "TypeScript minimal project template installer",
+    "main": "bin/ts-minimal-kit",
+    "bin": {
+        "ts-minimal-kit": "./bin/ts-minimal-kit"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/k1de/ts-minimal-kit-cli.git"
+    },
+    "files": [
+        "bin/"
+    ],
+    "keywords": [
+        "typescript",
+        "template",
+        "boilerplate",
+        "cli",
+        "scaffold",
+        "generator"
+    ],
+    "author": "tish",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/k1de/ts-minimal-kit-cli/issues"
+    },
+    "homepage": "https://github.com/k1de/ts-minimal-kit-cli#readme",
+    "engines": {
+        "node": ">=12.0.0"
+    }
+}
