@@ -48,6 +48,12 @@ npm install || {
     exit 1
 }
 
+echo "⬆️ Updating TypeScript to latest..."
+npm install typescript@latest -D || {
+    echo "$ERROR_MSG: npm"
+    exit 1
+}
+
 echo "🎉 Done! Opening in VS Code..."
 code . || echo "VS Code not found."
 
