@@ -30,6 +30,12 @@ cd "$1" || {
     exit 1
 }
 
+echo "📝 Setting project name..."
+npm pkg set name="$1" || {
+    echo "$ERROR_MSG: npm"
+    exit 1
+}
+
 echo "🧹 Removing git history..."
 npm run degit || {
     echo "$ERROR_MSG: npm"
