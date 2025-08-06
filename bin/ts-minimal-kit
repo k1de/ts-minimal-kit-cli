@@ -55,7 +55,7 @@ npm install || {
 }
 
 echo "⬆️ Updating TypeScript to latest..."
-npm install typescript@latest -D || {
+npm install -D typescript@latest @types/node@latest || {
     echo "$ERROR_MSG: npm"
     exit 1
 }

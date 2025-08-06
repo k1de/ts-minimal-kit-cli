@@ -19,6 +19,7 @@ This will:
 - Remove git history  
 - Initialize new repository
 - Install dependencies
+- Update TypeScript and add @types/node
 - Open in VS Code (if available)
 
 ## Requirements
@@ -31,10 +32,11 @@ This will:
 
 Minimal TypeScript project:
 - Strict typing enabled
+- ES modules support (modern import/export)
 - Source maps for debugging
 - Declaration files for libraries
 - Modern ESNext features
-- CommonJS modules support
+- Node.js types included (@types/node)
 
 ## Template structure
 
