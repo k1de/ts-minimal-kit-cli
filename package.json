@@ -4,7 +4,8 @@
     "description": "TypeScript minimal project template installer",
     "main": "bin/ts-minimal-kit",
     "bin": {
-        "ts-minimal-kit": "./bin/ts-minimal-kit"
+        "ts-minimal-kit": "./bin/ts-minimal-kit",
+        "ts-minimal-kit-web": "./bin/ts-minimal-kit-web"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
