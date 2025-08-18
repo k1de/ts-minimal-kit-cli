@@ -2,6 +2,7 @@
 
 CLI installer for TypeScript minimal kits:
 [ts-minimal-kit](https://github.com/k1de/ts-minimal-kit)
+and
 [ts-minimal-kit-web](https://github.com/k1de/ts-minimal-kit-web)
 
 ## Install
