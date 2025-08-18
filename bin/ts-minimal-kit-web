@@ -1,0 +1,67 @@
+#!/bin/bash
+
+# ts-minimal-kit-web installer
+# Usage: ts-minimal-kit-web <project-name>
+
+set -e  # Остановка при любой ошибке
+ERROR_MSG="❌ Closing because of error"
+
+if [ -z "$1" ]; then
+    echo "Usage: ts-minimal-kit-web <project-name>"
+    exit 1
+fi
+
+# Проверка существования директории
+if [ -d "$1" ]; then
+    echo "❌ Directory '$1' already exists"
+    exit 1
+fi
+
+echo "🚀 Installing ts-minimal-kit-web as '$1'..."
+
+# Проверка git clone
+git clone https://github.com/k1de/ts-minimal-kit-web.git "$1" || {
+    echo "$ERROR_MSG: git"
+    exit 1
+}
+
+cd "$1" || {
+    echo "$ERROR_MSG: cd" 
+    exit 1
+}
+
+echo "🧹 Removing git history..."
+npm run degit || {
+    echo "$ERROR_MSG: npm"
+    exit 1
+}
+
+echo "📝 Setting project name & version..."
+npm pkg set name="$1" && npm version 0.0.0 || {
+    echo "$ERROR_MSG: npm"
+    exit 1
+}
+
+echo "🔧 Initializing new repository..."
+git init || {
+    echo "$ERROR_MSG: git"
+    exit 1
+}
+
+echo "📦 Installing dependencies..."
+npm install || {
+    echo "$ERROR_MSG: npm"
+    exit 1
+}
+
+echo "⬆️ Updating TypeScript to latest..."
+npm install -D typescript@latest @types/node@latest || {
+    echo "$ERROR_MSG: npm"
+    exit 1
+}
+
+echo "🎉 Done! Opening in VS Code..."
+code . || echo "VS Code not found."
+
+echo ""
+echo "✅ Project '$1' is ready!"

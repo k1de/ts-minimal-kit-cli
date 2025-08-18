@@ -1,6 +1,8 @@
 # ts-minimal-kit-cli
 
-CLI installer for [ts-minimal-kit](https://github.com/k1de/ts-minimal-kit): minimal TypeScript template with strict typing and clean setup.
+CLI installer for TypeScript minimal kits:
+[ts-minimal-kit](https://github.com/k1de/ts-minimal-kit)
+[ts-minimal-kit-web](https://github.com/k1de/ts-minimal-kit-web)
 
 ## Install
 
@@ -10,53 +12,100 @@ npm install -g ts-minimal-kit-cli
 
 ## Usage
 
+### Minimal TypeScript kit template
+
 ```bash
 ts-minimal-kit my-project
 ```
 
-This will:
-- Clone the template
-- Remove git history  
-- Initialize new repository
-- Install dependencies
-- Update TypeScript and add @types/node
-- Open in VS Code (if available)
+Installs [ts-minimal-kit](https://github.com/k1de/ts-minimal-kit): minimal TypeScript template with strict typing.
+
+### Minimal TypeScript Web kit template
+
+```bash
+ts-minimal-kit-web my-project
+```
+
+Installs [ts-minimal-kit-web](https://github.com/k1de/ts-minimal-kit-web): TypeScript web framework with server + UI skeleton.
+
+## What happens
+
+Both commands will:
+
+-   Clone the template
+-   Remove git history
+-   Initialize new repository
+-   Install dependencies
+-   Update TypeScript to latest
+-   Open in VS Code (if available)
 
 ## Requirements
 
-- Node.js >= 12.0.0
-- Git
-- npm
+-   Node.js >= 18.0.0
+-   Git
+-   npm
 
-## What you get
+## Template comparison
 
-Minimal TypeScript project:
-- Strict typing enabled
-- ES modules support (modern import/export)
-- Source maps for debugging
-- Declaration files for libraries
-- Modern ESNext features
-- Node.js types included (@types/node)
+### 🎯 ts-minimal-kit
 
-## Template structure
+**Minimal TypeScript project:**
+
+-   Strict typing enabled
+-   ES modules support
+-   Source maps for debugging
+-   Declaration files
+-   Modern ESNext features
+-   Node.js types included
+
+**Structure:**
 
 ```
 my-project/
 ├── src/
-│   └── app.ts          # Main application file
-├── dist/               # Compiled files (auto-created)
-├── .gitignore          # Ignored files
-├── package.json        # Project settings
-├── tsconfig.json       # TypeScript configuration
-└── README.md           # Project readme
+│   └── app.ts          # Main application
+├── dist/               # Compiled files
+├── package.json        # Dependencies
+└── tsconfig.json       # TypeScript config
 ```
 
-## Available scripts
+[more info](https://github.com/k1de/ts-minimal-kit)
 
-- Watch and compile: `npm run dev`
-- Build: `npm run build`
-- Run: `npm run start`
-- Build and run: `npm run build:start`
-- Clean: `npm run clean`
+### 🚀 ts-minimal-kit-web
+
+**Full-stack web framework:**
+
+-   HTTP server with API support
+-   Client UI framework (zero dependencies)
+-   TypeScript strict mode
+-   SPA routing support
+-   Component library
+
+**Structure:**
+
+```
+my-project/
+├── src/
+│   ├── server/         # Server-side code
+│   │   ├── app.ts      # Main server
+│   │   └── router.ts   # API routes
+│   └── client/         # Client-side code
+│       └── index.ts    # Client app
+├── public/             # Static files
+│   ├── index.html      # Main HTML
+│   └── styles.css      # Base styles
+├── dist/               # Compiled server
+└── example/            # Example implementation
+```
+
+**UI Components:**
+
+-   Cards, sections, modals
+-   Forms, inputs, buttons
+-   Tables, lists, grids
+-   Tabs, progress bars
+-   Alerts, toasts, badges
+
+[more info](https://github.com/k1de/ts-minimal-kit-web)
 
 ISC © tish
