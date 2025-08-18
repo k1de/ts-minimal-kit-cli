@@ -1,6 +1,6 @@
 {
     "name": "ts-minimal-kit-cli",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "TypeScript minimal project template installer",
     "main": "bin/ts-minimal-kit",
     "bin": {
